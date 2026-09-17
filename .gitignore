@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Project cache and local state
+.projects/cache/
+.projects/vault/
+.projects/state.test.json
+.projects/state.local.test.json
+.projects/state.json
+.projects/state.local.json
+
+# Environment variables / secrets
+.env
+.env.*
+!.env.example
+
+# AI / editor configuration
+.agents/
+.claude/
+.cursor/
+.cursorignore
+AGENTS.md
+CLAUDE.md

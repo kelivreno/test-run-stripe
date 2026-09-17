@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Shopping Assistant</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <p class="eyebrow">Athena-ready</p>
+        <h1>AI Shopping Assistant</h1>
+        <p class="lede">
+          Ask for gifts, comparisons, and setup ideas. The chat UI is ready now;
+          live Athena answers will plug in once the API contract is confirmed.
+        </p>
+      </header>
+
+      <main class="chat-card" aria-label="Shopping assistant chat">
+        <div id="messages" class="messages" role="log" aria-live="polite">
+          <div class="bubble assistant">
+            Hi. I can help you find products, stay on budget, and compare
+            options. Try a starter prompt or tell me what you need.
+          </div>
+        </div>
+
+        <div class="starters" aria-label="Starter prompts">
+          <button type="button" class="starter" data-prompt="Find me a gift under $50">
+            Find me a gift under $50
+          </button>
+          <button type="button" class="starter" data-prompt="Help me compare two products">
+            Help me compare two products
+          </button>
+          <button type="button" class="starter" data-prompt="What should I buy for a home office?">
+            What should I buy for a home office?
+          </button>
+        </div>
+
+        <form id="chat-form" class="composer">
+          <label class="sr-only" for="message-input">Message</label>
+          <textarea
+            id="message-input"
+            name="message"
+            rows="1"
+            placeholder="Ask about a product, budget, or gift idea…"
+            required
+          ></textarea>
+          <button type="submit" id="send-button">Send</button>
+        </form>
+      </main>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>
